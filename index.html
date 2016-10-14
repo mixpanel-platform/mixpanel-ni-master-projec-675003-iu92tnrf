@@ -103,7 +103,7 @@
         var to_date = new Date().toISOString().slice(0,-14);
         var events = Events({from_date: from_date, to_date: to_date});
         return join(events, People())
-      .filter(function(item){
+        .filter(function(item){
     return item.event.properties["App name"] == "Guitar Rig 5"
   })
         .groupByUser(function(state, items) {
